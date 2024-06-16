@@ -7,3 +7,7 @@
     </main>
   </div>
 </template>
+
+<script lang="ts" setup>
+await useStore().getOrganisations();
+</script>
