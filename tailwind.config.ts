@@ -5,6 +5,10 @@ export default <Partial<Config>> {
   plugins: [],
   theme: {
     extend: {
+      colors: {
+        accent: '#26778C',
+        primary: '#005F78',
+      },
     },
   },
 };
