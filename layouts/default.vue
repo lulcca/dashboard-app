@@ -1,8 +1,8 @@
 <template>
-  <div class="grid h-screen place-content-start w-screen lg:grid-cols-[min-content_1fr]">
+  <div class="grid grid-cols-[1fr] grid-rows-[min-content_1fr] h-screen place-content-start w-screen lg:grid-cols-[min-content_1fr] lg:grid-rows-[1fr]">
     <Menu />
 
-    <main>
+    <main class="max-w-[2000px]">
       <slot />
     </main>
   </div>
