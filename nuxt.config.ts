@@ -13,4 +13,9 @@ export default defineNuxtConfig({
     '@pinia/nuxt',
     'nuxt-icon',
   ],
+  runtimeConfig: {
+    public: {
+      api: 'https://data.directory.openbankingbrasil.org.br/participants',
+    },
+  },
 });
