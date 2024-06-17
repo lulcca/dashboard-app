@@ -8,6 +8,7 @@
     "generate": "nuxt generate",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
+    "prepare": "nuxt prepare",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare"
   },
