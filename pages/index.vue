@@ -51,7 +51,7 @@
 </template>
 
 <script lang="ts" setup>
-import type { IOrganisation } from '~/types';
+import type { IOrganisationFilterKeys } from '~/types';
 
 const { organisations } = useStore();
 
@@ -65,27 +65,27 @@ function updateAxis(value: boolean) {
 }
 
 const barKey = ref(0);
-const barFilter = ref<keyof IOrganisation|null>(null);
+const barFilter = ref<IOrganisationFilterKeys|null>(null);
 const genericBarData = computed(() => {
   return barFilter.value
     ? useGenericFilter(organisations, barFilter.value)
     : genericData;
 });
 
-function updateBarFilter(value: keyof IOrganisation) {
+function updateBarFilter(value: IOrganisationFilterKeys) {
   barFilter.value = value;
   barKey.value++;
 }
 
 const doughnutKey = ref(0);
-const doughnutFilter = ref<keyof IOrganisation|null>(null);
+const doughnutFilter = ref<IOrganisationFilterKeys|null>(null);
 const genericDoughnutData = computed(() => {
   return doughnutFilter.value
     ? useGenericFilter(organisations, doughnutFilter.value)
     : genericData;
 });
 
-function updateDoughnutFilter(value: keyof IOrganisation) {
+function updateDoughnutFilter(value: IOrganisationFilterKeys) {
   doughnutFilter.value = value;
   doughnutKey.value++;
 }

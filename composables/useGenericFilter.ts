@@ -1,6 +1,6 @@
-import type { IOrganisation } from '~/types';
+import type { IOrganisation, IOrganisationFilterKeys } from '~/types';
 
-export default function (organisations: IOrganisation[], filter: keyof IOrganisation) {
+export default function (organisations: IOrganisation[], filter: IOrganisationFilterKeys) {
   let data: number[] = [];
   let labels: string[] = [];
 

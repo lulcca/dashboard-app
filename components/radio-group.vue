@@ -20,19 +20,19 @@
 </template>
 
 <script lang="ts" setup>
-import type { IOrganisation } from '~/types';
+import type { IOrganisationFilterKeys } from '~/types';
 
-const emit = defineEmits<{ (e: 'update', value: keyof IOrganisation): void }>();
+const emit = defineEmits<{ (e: 'update', value: IOrganisationFilterKeys): void }>();
 
 const props = defineProps<{
   id: string,
   legend: string,
-  items: (keyof IOrganisation)[],
+  items: IOrganisationFilterKeys[],
 }>();
 
 function handleChange(event: Event) {
   const target = event.target as HTMLInputElement;
 
-  if (target?.value) emit('update', target.value as keyof IOrganisation);
+  if (target?.value) emit('update', target.value as IOrganisationFilterKeys);
 }
 </script>
