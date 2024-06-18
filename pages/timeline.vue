@@ -35,14 +35,14 @@
 <script lang="ts" setup>
 const { organisations } = useStore();
 
-const yearFilter = ref('');
+const yearFilter = ref<string|''>('');
 const generalData = useYearFilter(organisations);
 
 const filteredData = computed(() => useMonthFilter(organisations, yearFilter.value));
 const data = computed(() => yearFilter.value ? filteredData.value.data : generalData.data);
 const labels = computed(() => yearFilter.value ? filteredData.value.labels : generalData.labels);
 
-function updateYear(year: string) {
+function updateYear(year: string|'') {
   yearFilter.value = year;
 }
 </script>

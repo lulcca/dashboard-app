@@ -31,7 +31,7 @@
 </template>
 
 <script lang="ts" setup>
-const emit = defineEmits<{ (e: 'update', value: string): void }>();
+const emit = defineEmits<{ (e: 'update', value: string|''): void }>();
 
 const props = defineProps<{
   label: string,
@@ -40,7 +40,6 @@ const props = defineProps<{
 
 function updateYear(event: Event) {
   const target = event.target as HTMLInputElement;
-
-  if (target?.value) emit('update', target.value);
+  emit('update', target?.value);
 }
 </script>
