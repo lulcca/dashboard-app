@@ -21,7 +21,7 @@
       </div>
 
       <div class="min-h-[320px]">
-        <GenericDoughnutChart
+        <ChartsGenericDoughnut
           :key="doughnutKey"
           :data="genericDoughnutData.data"
           :labels="genericDoughnutData.labels"
@@ -43,7 +43,7 @@
       </div>
 
       <div class="min-h-[320px]">
-        <GenericBarChart
+        <ChartsGenericBar
           :key="barKey"
           :axis
           :data="genericBarData.data"
