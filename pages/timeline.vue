@@ -1,14 +1,9 @@
 <template>
-  <section class="content-start gap-4 grid grid-rows-[auto_auto_auto_1fr_auto] h-full p-4 lg:gap-8 lg:grid-rows-[auto_auto_auto_0.6fr_auto]">
-    <h1 class="font-bold text-3xl">
-      Organisations Timeline
-    </h1>
-
-    <p class="font-normal text-lg">
-      Explore below the chronological evolution of registered organisations, from their establishment to the present day.
-    </p>
-
-    <hr>
+  <section class="content-start gap-4 grid grid-rows-[auto_1fr_auto] h-full p-6 lg:gap-8 lg:grid-rows-[auto_0.6fr_auto]">
+    <PageHeader
+      title="Organisations Timeline"
+      description="Explore below the chronological evolution of registered organisations, from their establishment to the present day."
+    />
 
     <div class="gap-4 grid [grid-template-areas:'filter'_'table'] lg:grid-cols-[auto_min-content] lg:[grid-template-areas:'table_filter']">
       <div class="[grid-area:table]">

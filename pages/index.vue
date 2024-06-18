@@ -1,14 +1,9 @@
 <template>
-  <section class="content-start gap-4 grid h-full p-4 lg:gap-8 lg:grid-rows-[auto_auto_auto_1fr]">
-    <h1 class="font-bold text-3xl">
-      Organisations
-    </h1>
-
-    <p class="font-normal text-lg">
-      Welcome to our platform designed to empower financial insights and regulatory compliance. Explore comprehensive data on banking organisations across Brazil, aiding informed decisions and strategic planning.
-    </p>
-
-    <hr>
+  <section class="content-start gap-4 grid h-full p-6 lg:gap-8 lg:grid-rows-[auto_1fr]">
+    <PageHeader
+      title="Organisations"
+      description="Welcome to our platform designed to empower financial insights and regulatory compliance. Explore comprehensive data on banking organisations across Brazil, aiding informed decisions and strategic planning."
+    />
 
     <div class="gap-12 grid grid-cols-1 lg:grid-cols-[max-content_1fr] lg:grid-rows-[1fr_2fr]">
       <div>
