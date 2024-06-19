@@ -14,7 +14,12 @@ export const useStore = defineStore('organisation', () => {
     if (data.value) organisations.value = data.value;
   }
 
+  function getOrganisationNames() {
+    return organisations.value.map(org => org.OrganisationName);
+  }
+
   return {
+    getOrganisationNames,
     getOrganisations,
     organisations,
   };
