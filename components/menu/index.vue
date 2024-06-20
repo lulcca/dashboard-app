@@ -12,6 +12,8 @@
 
         <Icon
           class="cursor-pointer"
+          data-cy="menu-toggler"
+          role="button"
           size="40"
           :name="menuIcon"
           @click="toggleMenu"

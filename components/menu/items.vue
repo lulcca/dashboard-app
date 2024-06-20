@@ -2,9 +2,14 @@
   <div class="content-start gap-8 grid">
     <div v-for="(item, i) in items" :key="i">
       <div class="gap-2 grid">
-        <span> {{ item.title }} </span>
+        <span>
+          {{ item.title }}
+        </span>
 
-        <div v-for="(subitem, j) in item.subitems" :key="j">
+        <div
+          v-for="(subitem, j) in item.subitems"
+          :key="j"
+        >
           <NuxtLink
             class="gap-2 grid grid-cols-[min-content_1fr] items-center justify-start px-4 py-2 rounded-lg w-full hover:bg-accent"
             :to="subitem.path"
@@ -14,7 +19,9 @@
               :name="subitem.icon"
             />
 
-            <span> {{ subitem.name }} </span>
+            <span :data-cy="`menu-item-${subitem.name}`">
+              {{ subitem.name }}
+            </span>
           </NuxtLink>
         </div>
       </div>
@@ -43,7 +50,7 @@ const items = [
     subitems: [
       {
         icon: 'mdi:account-search',
-        name: 'Custom',
+        name: 'custom',
         path: '/authorisation-server',
       },
     ],
