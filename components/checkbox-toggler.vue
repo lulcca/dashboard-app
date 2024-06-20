@@ -1,5 +1,8 @@
 <template>
-  <label class="inline-flex items-center cursor-pointer">
+  <label
+    class="inline-flex items-center cursor-pointer"
+    data-cy="checkbox-toggler"
+  >
     <input
       class="sr-only peer"
       type="checkbox"

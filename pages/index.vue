@@ -20,6 +20,7 @@
           :key="doughnutKey"
           :data="genericDoughnutData.data"
           :labels="genericDoughnutData.labels"
+          data-cy="generic-doughnut-chart"
         />
       </div>
 
@@ -44,6 +45,7 @@
           :data="genericBarData.data"
           :label="axis"
           :labels="genericBarData.labels"
+          data-cy="generic-bar-chart"
         />
       </div>
     </div>
