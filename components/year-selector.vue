@@ -14,6 +14,7 @@
 
     <select
       class="block border border-gray-500 p-2 rounded-lg text-sm"
+      data-cy="year-selector"
       name="years"
       @change="updateYear"
     >

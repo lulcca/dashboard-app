@@ -11,6 +11,7 @@
           :key="yearFilter"
           :data
           :labels
+          data-cy="timeline-chart"
         />
       </div>
 
