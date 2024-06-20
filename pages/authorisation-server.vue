@@ -33,6 +33,7 @@
               :key="organisationSelected"
               :data="data[0]"
               :labels
+              data-cy="ciba-chart"
             />
           </div>
         </div>
@@ -44,6 +45,7 @@
               :key="organisationSelected"
               :data="data[1]"
               :labels
+              data-cy="dcr-chart"
             />
           </div>
         </div>
@@ -55,6 +57,7 @@
               :key="organisationSelected"
               :data="data[2]"
               :labels
+              data-cy="redirect-chart"
             />
           </div>
         </div>
