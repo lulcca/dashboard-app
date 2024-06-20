@@ -23,6 +23,7 @@
       <MenuItems
         v-show="isOpen"
         class="px-4"
+        @close="toggleMenu"
       />
     </header>
 

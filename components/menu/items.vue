@@ -1,6 +1,9 @@
 <template>
   <div class="content-start gap-8 grid">
-    <div v-for="(item, i) in items" :key="i">
+    <div
+      v-for="(item, i) in items"
+      :key="i"
+    >
       <div class="gap-2 grid">
         <span>
           {{ item.title }}
@@ -13,6 +16,7 @@
           <NuxtLink
             class="gap-2 grid grid-cols-[min-content_1fr] items-center justify-start px-4 py-2 rounded-lg w-full hover:bg-accent"
             :to="subitem.path"
+            @click="emit('close')"
           >
             <Icon
               size="20"
@@ -30,6 +34,8 @@
 </template>
 
 <script lang="ts" setup>
+const emit = defineEmits<{ (e: 'close'): void }>();
+
 const items = [
   {
     subitems: [
