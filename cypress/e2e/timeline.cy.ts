@@ -15,15 +15,15 @@ describe('Pages > Timeline', () => {
 
     describe('when filtering by year', () => {
       it('update chart when `2021` is selected', () => {
-        differentChartWithSelect('[data-cy="timeline-chart"]', '[data-cy="year-selector"]', '2021');
+        differentChartWithSelect('[data-cy="timeline-chart"]', '[data-cy="filter-selector-year"]', '2021');
       });
 
       it('update chart when `2022` is selected', () => {
-        differentChartWithSelect('[data-cy="timeline-chart"]', '[data-cy="year-selector"]', '2022');
+        differentChartWithSelect('[data-cy="timeline-chart"]', '[data-cy="filter-selector-year"]', '2022');
       });
 
       it('update chart when `2023` is selected', () => {
-        differentChartWithSelect('[data-cy="timeline-chart"]', '[data-cy="year-selector"]', '2023');
+        differentChartWithSelect('[data-cy="timeline-chart"]', '[data-cy="filter-selector-year"]', '2023');
       });
     });
   });

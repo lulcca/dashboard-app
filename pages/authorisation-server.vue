@@ -5,7 +5,15 @@
       description="This tool enables you to explore specific data about listed financial organisations, facilitating detailed analysis and informed decision-making."
     />
 
-    <OrganisationSearch @name-selected="nameSelected" />
+    <FilterSelector
+        id="organisation"
+        icon="octicon:organization-16"
+        label="Organisations"
+        placeholder="Select an organisation..."
+        :items="organisationNames"
+        :resetable="false"
+        @update="nameSelected"
+      />
 
     <div v-if="organisationSelected">
       <h2
@@ -77,6 +85,7 @@ import type { IAuthorisationServer } from '~/types';
 
 const organisationSelected = ref<string>('');
 
+const organisationNames = useStore().getOrganisationNames();
 const organisationAuthorisationServer = ref<IAuthorisationServer[]>([]);
 
 const namesArray = ref<string[]>();

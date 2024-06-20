@@ -15,9 +15,14 @@
         />
       </div>
 
-      <YearSelector
-        label="Filter by year"
+      <FilterSelector
+        id="year"
+        class="[grid-area:filter]"
+        icon="mdi:filter"
+        label="Years"
+        placeholder="--"
         :items="generalData.labels"
+        :resetable="true"
         @update="updateYear"
       />
     </div>

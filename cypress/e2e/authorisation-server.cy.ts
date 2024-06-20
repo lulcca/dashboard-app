@@ -8,7 +8,7 @@ describe('Pages > Authorisation Server', () => {
 
   describe('servers chart section', () => {
     it('renders an organisation selector', () => {
-      cy.get('[data-cy="organisation-selector"]').should('exist');
+      cy.get('[data-cy="filter-selector-organisation"]').should('exist');
     });
 
     describe('before selecting an organisation, does not display charts and messages', () => {
@@ -24,7 +24,7 @@ describe('Pages > Authorisation Server', () => {
     });
 
     describe('after selecting an organisation, display it server infos', () => {
-      beforeEach(() => cy.wait(1000).get('[data-cy="organisation-selector"]').select('SANTANDER CCVM S.A.'));
+      beforeEach(() => cy.wait(1000).get('[data-cy="filter-selector-organisation"]').select('SANTANDER CCVM S.A.'));
 
       it('renders message and server names', () => {
         cy.contains('2 servers found, showing data for: SANTANDER CCVM S.A.');
