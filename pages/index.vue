@@ -25,16 +25,17 @@
       </div>
 
       <div>
-        <CheckboxToggler
-          label="Change axis"
-          @update="updateAxis"
-        />
-
         <RadioGroup
           id="bar-choice"
           legend="Select a bar chart of interest"
           :items="['City', 'CompanyRegister', 'ParentOrganisationReference']"
           @update="updateBarFilter"
+        />
+
+        <CheckboxToggler
+          class="mt-4"
+          label="Change axis"
+          @update="updateAxis"
         />
       </div>
 

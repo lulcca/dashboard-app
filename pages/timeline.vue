@@ -6,7 +6,7 @@
     />
 
     <div class="gap-4 grid [grid-template-areas:'filter'_'table'] lg:grid-cols-[auto_min-content] lg:[grid-template-areas:'table_filter']">
-      <div class="[grid-area:table]">
+      <div class="[grid-area:table] max-w-5xl min-h-80">
         <ChartsTimeline
           :key="yearFilter"
           :data

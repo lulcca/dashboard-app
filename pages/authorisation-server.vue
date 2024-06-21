@@ -23,7 +23,7 @@
         {{ `${organisationAuthorisationServer.length} ${organisationAuthorisationServer.length > 1 ? 'servers' : 'server'} found, showing data for: ${organisationSelected}` }}
       </h2>
 
-      <div class="grid grid-cols-2 grid-rows-2 mt-10">
+      <div class="gap-4 grid grid-cols-1 mt-10 lg:grid-cols-2 lg:grid-rows-2">
         <div>
           <h3 class="italic text-sm">
             Server names:
